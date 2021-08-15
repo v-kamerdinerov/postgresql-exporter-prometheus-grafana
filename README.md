@@ -25,3 +25,7 @@ DATA_SOURCE_NAME=postgresql://postgres:password@postgres_db:5432/postgres?sslmod
 ```bash
 docker-compose up -d
 ```
+
+#### Example dashboard
+![Example dashboard](https://i.gyazo.com/6547d7aed4d8b07afb1035fd4133c467.png)
+
