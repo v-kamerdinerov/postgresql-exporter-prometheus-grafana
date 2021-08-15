@@ -41,7 +41,7 @@ services:
     networks:
       - back-log
 
-  db:
+  postgres_db:
     image: postgres
     volumes:
       - posgres_data:/var/lib/postgresql/data
