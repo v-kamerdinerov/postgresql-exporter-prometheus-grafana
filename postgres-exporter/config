@@ -1,1 +1,1 @@
-DATA_SOURCE_NAME=postgresql://postgres:password@postgres_db:5432/postgres?sslmode=disable
+DATA_SOURCE_NAME=postgresql://postgres:postgres@postgres_db:5432/postgres?sslmode=disable
