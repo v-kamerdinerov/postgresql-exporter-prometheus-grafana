@@ -6,8 +6,8 @@ volumes:
     postgres_data: {}
 
 networks:
-  front-log:
-  back-log:
+  grafana-network:
+  local:
 
 services:
 
@@ -28,7 +28,7 @@ services:
     depends_on:
       - postgres-exporter
     networks:
-      - back-log
+      - local
     restart: always
 
 
@@ -39,7 +39,7 @@ services:
     env_file:
       - ./postgres-exporter/config
     networks:
-      - back-log
+      - local
 
   postgres_db:
     image: postgres
@@ -52,7 +52,7 @@ services:
     ports:
       - 5432:5432
     networks:
-      - back-log
+      - local
     restart: always
 
   grafana:
@@ -68,6 +68,6 @@ services:
     env_file:
       - ./grafana/config.monitoring
     networks:
-      - back-log
-      - front-log
+      - local
+      - grafana-network
     restart: always
